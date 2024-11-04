@@ -1,0 +1,404 @@
+/* Root Variables for Colors */
+:root {
+    --text-color: #2D2D2D; /* Primary dark text */
+    --link-color: #0077B6; /* Accent color for links */
+    --background-color: #FFFFFF; /* Background color */
+    --header-footer-color: #1B263B; /* Header and footer color */
+    --secondary-text-color: #6C757D; /* Subtle secondary text */
+    --highlight-color: #4A76EE; /* Skill bar and other accents */
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header Styles */
+header {
+    background: #28ba95;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    transition: color 0.3s ease, background 0.3s ease;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background: #2D4059;
+    color: #B0C4DE;
+}
+
+/* Flex Container for About and Education */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4em;
+}
+
+/* About Section */
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    color: var(--text-color);
+}
+
+h2 {
+    font-size: 2em;
+    color: var(--text-color);
+}
+
+p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--secondary-text-color);
+}
+
+.introContainer {
+    margin-bottom: 2em;
+    padding: 1em;
+}
+
+.introContainer h1, .introContainer h2 {
+    margin: 0;
+    opacity: 0;
+    animation: zoomIn 7s linear infinite;
+}
+
+.movingBar {
+    animation: moving 10s linear infinite;
+}
+
+.movingBar span {
+    margin-right: 2em;
+    font-size: 1.6em;
+    color: var(--highlight-color);
+}
+
+@keyframes moving {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes zoomIn {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.gradientText {
+    background: linear-gradient(to right, #cd10a1, #d1440c, #0b30e9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 1.5em;
+    color: transparent;
+}
+
+.imageContainer {
+    margin-bottom: 2em;
+}
+
+.profileImg {
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    border: 0.2em solid var(--highlight-color);
+}
+
+/* Social Links */
+.socialLink {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    display: flex;
+    gap: 1em;
+}
+
+.social img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Projects Section Styling */
+#projects {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5em;
+    color: var(--text-color);
+    margin-bottom: 0.5em;
+}
+
+#projects p {
+    color: var(--secondary-text-color);
+    font-size: 1.1em;
+    margin-bottom: 2em;
+}
+
+.project-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item h3 {
+    color: var(--link-color);
+    font-size: 1.8em;
+    margin-bottom: 0.3em;
+}
+
+.project-item p {
+    font-size: 1em;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 768px) {
+    #projects {
+        padding: 1em;
+    }
+    .project-item {
+        padding: 1em;
+    }
+}
+
+/* Skill container */
+.skill-bar {
+    background-color: #ffc0cb;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    text-align: center;
+}
+
+.skill-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.progress {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    width: 80%;
+    height: 10px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress-bar {
+    transition: width 1s ease-in-out;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+footer {
+    margin-top: 370px; /* Space between footer and skills */
+    text-align: center; /* Center-align the footer text */
+    padding: 10px; /* Optional padding */
+}
+
+/* Education Section */
+.education-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 2em;
+}
+
+.education-container ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.education-container li {
+    background-color: #ffc0cb;
+    border-radius: 5px;
+    width: 350px;
+    height: 150px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.education-container li:hover {
+    background-color: #e1e5ee;
+}
+
+.contact-section {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 40px; /* Add padding to the section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 800px; /* Limit width for better readability */
+    margin: auto; /* Center the section */
+}
+
+h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333; /* Darker color for text */
+}
+
+.contact-container {
+    display: flex; /* Flexbox for layout */
+    flex-direction: row; /* Row layout */
+    justify-content: space-between; /* Space between items */
+    gap: 20px; /* Space between columns */
+}
+
+.contact-details {
+    flex: 1; /* Allow details to grow */
+    display: flex; /* Flexbox for details */
+    flex-direction: column; /* Stack items vertically */
+}
+
+.contact-item {
+    display: flex; /* Flexbox for item layout */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 15px; /* Space between items */
+    background: #fff; /* White background for items */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding inside item */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Shadow for item depth */
+    transition: background 0.3s; /* Transition for hover effect */
+}
+
+.contact-item:hover {
+    background: #f0f0f0; /* Slightly darker on hover */
+}
+
+.contact-item img {
+    width: 24px; /* Set icon size */
+    height: 24px; /* Set icon size */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.contact-form {
+    flex: 1; /* Allow form to grow */
+    background: #fff; /* White background for form */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Padding inside form */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Shadow for form depth */
+}
+
+.contact-form label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: bold; /* Bold labels */
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 15px; /* Space below inputs */
+}
+
+.contact-form button {
+    background-color: #4caf50; /* Green button */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 15px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s; /* Transition for hover effect */
+}
+
+.contact-form button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+
+/* Footer Styles */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    background-color: #28ba95;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+}
+.footer-icon {
+    width: 27px; /* Change to your desired width */
+    height: 27px; /* Change to your desired height */
+}
+

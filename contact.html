@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Amrita Sabat</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="contact.css"> <!-- Ensure you have a CSS file for contact styling -->
+</head>
+<body>
+    <header>
+        <h1>Amrita Sabat</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-section">
+            <h2>Contact Me</h2>
+            <div class="contact-container">
+                <!-- Contact Details Section -->
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <a href="mailto:amritasabat04@gmail.com" target="_blank">
+                            <img src="images/email-icon.png" alt="Email Icon">
+                            <p>amritasabat04@gmail.com</p>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://github.com/amrita123sabat" target="_blank">
+                            <img src="images/github-icon.png" alt="GitHub Icon">
+                            <p>github.com/amrita123sabat</p>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="tel:+46727788212">
+                            <img src="images/phone-icon.png" alt="Phone Icon">
+                            <p>+46 727 788 212</p>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://www.linkedin.com/in/amrita-sabat-194a9b208/" target="_blank">
+                            <img src="images/linkedin-icon.png" alt="LinkedIn Icon">
+                            <p>linkedin.com/in/amrita-sabat</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form Section -->
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/xrbgeynk" method="POST">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[+]{0,1}[0-9]{7,15}" placeholder="+46 727 788 212">
+
+                        <label for="enquiry">Enquiry:</label>
+                        <textarea id="enquiry" name="enquiry" rows="4" required></textarea>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Amrita Sabat</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
