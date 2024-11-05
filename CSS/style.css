@@ -397,40 +397,37 @@ footer p {
 .contact-form button:hover {
     background-color: #45a049; /* Darker green on hover */
 }
-/* Mobile Navigation */
-.menu-toggle {
-    display: none; /* Hide the toggle button by default */
+
+/* Hide mobile menu initially */
+.mobile-menu {
+    display: none;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
 }
 
-/* Nav Links */
-nav.nav-links {
-    display: flex; /* Display nav links in a row on desktop */
+.mobile-menu nav a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
 }
 
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Show toggle button on mobile */
-    }
+.mobile-menu nav a:hover {
+    background-color: #555;
+}
 
-    nav.nav-links {
-        display: none; /* Hide nav links on mobile by default */
-        flex-direction: column; /* Stack links vertically */
-        position: absolute;
-        top: 60px; /* Adjust position based on header height */
-        left: 0;
-        right: 0;
-        background-color: #28ba95; /* Background color for mobile menu */
-        text-align: center;
-        padding: 10px 0;
-        z-index: 1000; /* Ensure it appears above other content */
-    }
+/* Show mobile menu when 'show' class is added */
+.mobile-menu.show {
+    display: block;
+}
 
-    nav.nav-links.active {
-        display: flex; /* Show menu when 'active' class is added */
-    }
-
-    nav.nav-links a {
-        padding: 10px; /* Adjust padding for mobile */
-        margin: 5px 0; /* Adjust margin for vertical spacing */
-    }
+.hamburger button {
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
 }

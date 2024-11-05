@@ -10,7 +10,12 @@
 <body class="page-container">
     <header>
         <h1>Welcome to My Portfolio</h1>
-        <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+        <div class="hamburger">
+            <button onclick="toggleMenu()">&#9776; Menu</button>
+        </div>
+        
+        <!-- Mobile menu div without onclick, with id for JavaScript targeting -->
+        <div class="mobile-menu" id="mobileMenu">
         <nav>
             
             <div class="nav-links"> 
