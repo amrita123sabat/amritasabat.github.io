@@ -7,10 +7,10 @@ document.querySelectorAll('nav a').forEach(anchor => {
             behavior: 'smooth'
         });
 
-        // Close the menu on mobile view after clicking a link
-        const navLinks = document.querySelector('.nav-links');
-        if (navLinks.classList.contains('show')) {
-            navLinks.classList.remove('show');
+        // Close the mobile menu after clicking a link
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileMenu.classList.contains('show')) {
+            mobileMenu.classList.remove('show');
         }
     });
 });
@@ -27,5 +27,11 @@ window.addEventListener('load', function() {
 // Toggle Mobile Menu
 function toggleMenu() {
     const mobileMenu = document.getElementById('mobileMenu');
-    mobileMenu.classList.toggle('show');
-   }
+    const hamburgerButton = document.querySelector('.hamburger button');
+    const isExpanded = mobileMenu.classList.toggle('show');
+
+    // Update the aria-expanded attribute
+    hamburgerButton.setAttribute('aria-expanded', isExpanded);
+}
+
+
