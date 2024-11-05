@@ -18,3 +18,8 @@ window.onload = function() {
         bar.style.width = skillValue;
     });
 };
+
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
+}

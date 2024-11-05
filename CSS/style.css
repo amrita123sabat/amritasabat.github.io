@@ -397,3 +397,43 @@ footer p {
 .contact-form button:hover {
     background-color: #45a049; /* Darker green on hover */
 }
+/* Mobile Navigation Styles */
+.hamburger {
+    display: none; /* Hidden by default, visible on mobile */
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    /* Make the navigation links hidden by default on mobile */
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust this based on header height */
+        right: 0;
+        background-color: var(--header-footer-color); /* Same as header color */
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    /* Show nav links when .show class is added */
+    nav .nav-links.show {
+        display: flex;
+    }
+
+    /* Show the hamburger icon on mobile */
+    .hamburger {
+        display: block;
+    }
+
+    /* Style for mobile nav links */
+    nav .nav-links a {
+        padding: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+}
+
