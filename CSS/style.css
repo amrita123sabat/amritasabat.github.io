@@ -397,43 +397,46 @@ footer p {
 .contact-form button:hover {
     background-color: #45a049; /* Darker green on hover */
 }
-/* Mobile Navigation Styles */
-.hamburger {
-    display: none; /* Hidden by default, visible on mobile */
+
+/* Mobile Navigation */
+.menu-toggle {
+    display: none; /* Hidden on desktop */
     font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
     cursor: pointer;
-    padding: 10px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }
 
 @media (max-width: 768px) {
-    /* Make the navigation links hidden by default on mobile */
-    nav .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* Adjust this based on header height */
-        right: 0;
-        background-color: var(--header-footer-color); /* Same as header color */
-        width: 100%;
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        z-index: 1000;
-    }
-
-    /* Show nav links when .show class is added */
-    nav .nav-links.show {
-        display: flex;
-    }
-
-    /* Show the hamburger icon on mobile */
-    .hamburger {
+    .menu-toggle {
         display: block;
     }
 
-    /* Style for mobile nav links */
-    nav .nav-links a {
-        padding: 15px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    nav.nav-links {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Position below header */
+        left: 0;
+        right: 0;
+        background-color: #28ba95;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    nav.nav-links a {
+        display: block;
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    /* Show menu when active */
+    nav.nav-links.active {
+        display: flex;
     }
 }
-
