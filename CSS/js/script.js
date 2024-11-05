@@ -28,4 +28,4 @@ window.addEventListener('load', function() {
 function toggleMenu() {
     const mobileMenu = document.getElementById('mobileMenu');
     mobileMenu.classList.toggle('show');
-}
+   }
