@@ -81,6 +81,18 @@ p {
     margin: 0 auto;
     color: var(--secondary-text-color);
 }
+/* Text Size Adjustments */
+h1 {
+    font-size: 28px; /* Change as needed */
+}
+
+h2 {
+    font-size: 22px; /* Change as needed */
+}
+
+h3 {
+    font-size: 24px; /* If you have h3 tags */
+}
 
 .introContainer {
     margin-bottom: 2em;
@@ -397,37 +409,49 @@ footer p {
 .contact-form button:hover {
     background-color: #45a049; /* Darker green on hover */
 }
-
-/* Hide mobile menu initially */
-.mobile-menu {
-    display: none;
-    background-color: #333;
-    position: absolute;
-    top: 60px;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.mobile-menu nav a {
-    display: block;
-    padding: 10px;
+/* Hamburger Icon Styling */
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 3rem;
     color: white;
-    text-decoration: none;
-}
-
-.mobile-menu nav a:hover {
-    background-color: #555;
-}
-
-/* Show mobile menu when 'show' class is added */
-.mobile-menu.show {
-    display: block;
-}
-
-.hamburger button {
-    font-size: 1.5em;
-    background: none;
-    border: none;
     cursor: pointer;
+    position: relative;
+    z-index: 101; /* Ensure it stays above other elements */
 }
+
+/* Mobile Navigation Styling */
+@media (max-width: 995px) {
+    /* Show hamburger icon only on smaller screens */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide the nav menu by default on mobile */
+    nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70%;
+        background-color: #161616;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 100; /* Ensure it overlays the content */
+        padding: 2rem 1rem;
+        transition: all 0.3s ease;
+    }
+
+    /* Nav links styling within mobile menu */
+    nav a {
+        font-size: 2rem;
+        margin: 1.5rem 0;
+    }
+
+    /* Display nav when 'active' class is toggled on */
+    nav.active {
+        display: flex; /* Display flex when active */
+    }
+}
+

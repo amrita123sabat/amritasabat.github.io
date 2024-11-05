@@ -26,12 +26,8 @@ window.addEventListener('load', function() {
 
 // Toggle Mobile Menu
 function toggleMenu() {
-    const mobileMenu = document.getElementById('mobileMenu');
-    const hamburgerButton = document.querySelector('.hamburger button');
-    const isExpanded = mobileMenu.classList.toggle('show');
-
-    // Update the aria-expanded attribute
-    hamburgerButton.setAttribute('aria-expanded', isExpanded);
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('active');
 }
 
 
