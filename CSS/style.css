@@ -62,6 +62,7 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 1em;
 }
 
 h1 {
@@ -208,7 +209,7 @@ p {
     }
 }
 
-/* Skill container */
+/* Skill Container */
 .skill-bar {
     background-color: #ffc0cb;
     border: 1px solid #ddd;
@@ -248,10 +249,31 @@ p {
     justify-content: center;
     gap: 10px;
 }
+
+/* Footer Styles */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 footer {
-    margin-top: 370px; /* Space between footer and skills */
-    text-align: center; /* Center-align the footer text */
-    padding: 10px; /* Optional padding */
+    background-color: #28ba95;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.footer-icon {
+    width: 27px; /* Change to your desired width */
+    height: 27px; /* Change to your desired height */
 }
 
 /* Education Section */
@@ -289,6 +311,7 @@ footer {
     background-color: #e1e5ee;
 }
 
+/* Contact Section */
 .contact-section {
     background-color: #f9f9f9; /* Light background for contrast */
     padding: 40px; /* Add padding to the section */
@@ -298,7 +321,7 @@ footer {
     margin: auto; /* Center the section */
 }
 
-h2 {
+.contact-section h2 {
     text-align: center; /* Center the heading */
     margin-bottom: 20px; /* Space below the heading */
     color: #333; /* Darker color for text */
@@ -374,31 +397,3 @@ h2 {
 .contact-form button:hover {
     background-color: #45a049; /* Darker green on hover */
 }
-
-
-
-/* Footer Styles */
-.page-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-footer {
-    background-color: #28ba95;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-}
-
-footer p {
-    margin: 0;
-    font-size: 1.2em;
-}
-.footer-icon {
-    width: 27px; /* Change to your desired width */
-    height: 27px; /* Change to your desired height */
-}
-
