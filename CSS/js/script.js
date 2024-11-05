@@ -25,9 +25,7 @@ window.addEventListener('load', function() {
 });
 
 // Toggle Mobile Menu
-document.querySelector('.menu-toggle').addEventListener('click', toggleMenu);
-
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('show');
+    navLinks.classList.toggle('active'); // Change 'show' to 'active' to match your CSS
 }

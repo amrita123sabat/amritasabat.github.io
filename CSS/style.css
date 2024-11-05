@@ -397,7 +397,6 @@ footer p {
 .contact-form button:hover {
     background-color: #45a049; /* Darker green on hover */
 }
-
 /* Mobile Navigation */
 .menu-toggle {
     display: none; /* Hidden on desktop */
@@ -411,32 +410,32 @@ footer p {
     right: 15px;
 }
 
+nav.nav-links {
+    display: none; /* Hidden by default on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Position below header */
+    left: 0;
+    right: 0;
+    background-color: #28ba95;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+/* Show menu when active */
+nav.nav-links.active {
+    display: flex; /* Use 'active' class to show menu */
+}
+
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block;
-    }
-
-    nav.nav-links {
-        display: none; /* Hidden by default on mobile */
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* Position below header */
-        left: 0;
-        right: 0;
-        background-color: #28ba95;
-        text-align: center;
-        padding: 10px 0;
-        z-index: 1000;
+        display: block; /* Show toggle button on mobile */
     }
 
     nav.nav-links a {
-        display: block;
+        display: block; /* Links are block elements */
         padding: 10px;
         margin: 5px 0;
-    }
-
-    /* Show menu when active */
-    nav.nav-links.active {
-        display: flex;
     }
 }
