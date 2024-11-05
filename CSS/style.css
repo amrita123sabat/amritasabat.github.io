@@ -90,9 +90,10 @@ p {
 .introContainer h1, .introContainer h2 {
     margin: 0;
     opacity: 1;
-    animation: none;
+    animation: none; /* Confirmed animation removal */
 }
 
+/* Skill Bar Animation (if needed) */
 .movingBar {
     animation: moving 10s linear infinite;
 }
@@ -106,12 +107,6 @@ p {
 @keyframes moving {
     0% { transform: translateX(0%); }
     100% { transform: translateX(-100%); }
-}
-
-@keyframes zoomIn {
-    0% { opacity: 0; transform: scale(0.5); }
-    50% { opacity: 1; transform: scale(1); }
-    100% { opacity: 1; transform: scale(1); }
 }
 
 .gradientText {
@@ -206,6 +201,12 @@ p {
     }
     .project-item {
         padding: 1em;
+    }
+    h1, h2 {
+        font-size: 2.5em; /* Adjust font sizes for mobile */
+    }
+    p {
+        font-size: 1em; /* Adjust font size for mobile */
     }
 }
 
@@ -397,6 +398,7 @@ footer p {
 .contact-form button:hover {
     background-color: #45a049; /* Darker green on hover */
 }
+
 /* Mobile Navigation */
 .menu-toggle {
     display: none; /* Hidden on desktop */
@@ -437,5 +439,25 @@ nav.nav-links.active {
         display: block; /* Links are block elements */
         padding: 10px;
         margin: 5px 0;
+    }
+
+    h1, h2 {
+        font-size: 2.5em; /* Adjust font sizes for mobile */
+    }
+
+    p {
+        font-size: 1em; /* Adjust font size for mobile */
+    }
+
+    .education-container li {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .education-container {
+        flex-direction: column; /* Stack education items */
+    }
+
+    .contact-container {
+        flex-direction: column; /* Stack contact items */
     }
 }
