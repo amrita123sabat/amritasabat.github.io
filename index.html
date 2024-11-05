@@ -5,6 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Amrita Sabat</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        /* Base styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 20px;
+            background-color: #f8f8f8;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            margin: 10px 0;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Allow links to wrap on small screens */
+        }
+
+        .nav-links a {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007BFF; /* Change color on hover */
+        }
+
+        .hamburger {
+            display: none; /* Hidden by default */
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Main content */
+        .content-wrap {
+            flex: 1;
+            padding: 20px; /* Add padding to main content */
+        }
+
+        .aboutContainer {
+            padding: 20px;
+        }
+
+        .imageContainer {
+            text-align: center;
+        }
+
+        .profileImg {
+            max-width: 100%; /* Responsive image */
+            height: auto;
+            border-radius: 50%; /* Make profile image circular */
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer-icon {
+            width: 30px; /* Set icon size */
+            margin: 0 10px; /* Space between icons */
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Hide navigation links on small screens */
+            }
+
+            .hamburger {
+                display: block; /* Show hamburger icon */
+                margin: 0 auto; /* Center the hamburger icon */
+            }
+
+            .introContainer h1 {
+                font-size: 2em; /* Adjust font size for headings */
+            }
+
+            .introContainer h2 {
+                font-size: 1.2em; /* Adjust font size for subheadings */
+                margin: 10px 0;
+            }
+
+            .aboutContainer {
+                padding: 10px; /* Less padding on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .introContainer h1 {
+                font-size: 1.5em; /* Further decrease font size for very small screens */
+            }
+
+            .introContainer h2 {
+                font-size: 1em; /* Further decrease font size for very small screens */
+            }
+
+            .footer {
+                padding: 10px; /* Less padding for small screens */
+            }
+        }
+    </style>
 </head>
 <body class="page-container">
     <header>
@@ -21,7 +142,7 @@
         </nav>
         <div class="hamburger" onclick="toggleMenu()">
             &#9776;
-       </div>
+        </div>
        
     </header>
     
