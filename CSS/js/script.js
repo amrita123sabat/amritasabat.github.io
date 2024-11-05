@@ -24,10 +24,10 @@ window.addEventListener('load', function() {
     });
 });
 
-// Toggle Mobile Menu
+// Function to toggle the menu
 function toggleMenu() {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('active');
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
 }
 
 

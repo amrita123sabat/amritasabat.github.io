@@ -419,39 +419,33 @@ footer p {
     z-index: 101; /* Ensure it stays above other elements */
 }
 
-/* Mobile Navigation Styling */
-@media (max-width: 995px) {
-    /* Show hamburger icon only on smaller screens */
-    .hamburger {
-        display: block;
-    }
-
-    /* Hide the nav menu by default on mobile */
-    nav {
-        display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 70%;
-        background-color: #161616;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 100; /* Ensure it overlays the content */
-        padding: 2rem 1rem;
-        transition: all 0.3s ease;
-    }
-
-    /* Nav links styling within mobile menu */
-    nav a {
-        font-size: 2rem;
-        margin: 1.5rem 0;
-    }
-
-    /* Display nav when 'active' class is toggled on */
-    nav.active {
-        display: flex; /* Display flex when active */
-    }
+/* Mobile menu toggle */
+.nav-links.active {
+    display: flex; /* Show nav links when active */
+    flex-direction: column; /* Stack the links vertically */
+    align-items: center;
+    background-color: #f8f8f8; /* Optional: add a background color */
+    position: absolute;
+    top: 70px; /* Position below the header */
+    width: 100%; /* Full width */
+    left: 0;
+    padding: 10px 0;
+    z-index: 99; /* Ensure it overlays content */
 }
 
+@media (max-width: 768px) {
+    /* Hide navigation links by default on mobile */
+    .nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Full width */
+    }
+
+    /* Show hamburger icon on mobile */
+    .hamburger {
+        display: block;
+        font-size: 30px; /* Adjust size of hamburger icon */
+        color: #333;
+        cursor: pointer;
+    }
+}
